@@ -8,7 +8,7 @@ export const NavbarLogo = () => {
         <img
           src="https://c.animaapp.com/mm7jgoq6KT5fKc/assets/logo.svg"
           alt="accueil"
-          className="aspect-square box-border caret-transparent h-12 max-w-full opacity-60 hover:opacity-90 transition-opacity duration-200 md:opacity-40"
+          className="aspect-square h-12 max-w-full opacity-70 hover:opacity-100 transition-opacity duration-200 md:opacity-50"
         />
       </a>
     </div>
