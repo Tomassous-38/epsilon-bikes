@@ -1,12 +1,19 @@
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { FeaturedCard } from "@/sections/FeaturedSection/components/FeaturedCard";
 
 export const FeaturedSection = () => {
+  const { ref: headingRef, isVisible: headingVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.3 });
+
   return (
     <section className="relative box-border caret-transparent grid min-h-[1000px] border-red-500 overflow-hidden border-t-2 border-solid">
       <div className="bg-zinc-700 bg-[url('https://www.epsilon-bikes.com/wp-content/themes/epsilon-bikes/static/images/featured-heading-pattern.svg')] bg-no-repeat bg-size-[50%] box-border caret-transparent bg-right px-6 md:px-16">
         <div className="box-border caret-transparent max-w-screen-xl mx-auto py-12 md:py-16">
-          <div className="box-border caret-transparent gap-x-12 flex flex-col gap-y-12 w-full">
-            <h2 className="text-[32px] font-bold box-border caret-transparent leading-10 overflow-clip md:text-5xl md:leading-[48px]">
+          <div ref={headingRef} className="box-border caret-transparent gap-x-12 flex flex-col gap-y-12 w-full">
+            <h2
+              className={`text-[32px] font-bold box-border caret-transparent leading-10 overflow-clip md:text-5xl md:leading-[48px] reveal-base reveal-left ${
+                headingVisible ? "revealed" : ""
+              }`}
+            >
               <span className="text-stone-100 text-[32px] box-border caret-transparent inline-block leading-10 md:text-5xl md:leading-[48px]">
                 Réalisations à la une
               </span>
@@ -24,17 +31,18 @@ export const FeaturedSection = () => {
           <>
             <span>
               À l'image du crossfader d'une table de mixage, qui permet de
-              passer d’une piste audio à une autre, notre gravel CrossFader vous
+              passer d'une piste audio à une autre, notre gravel CrossFader vous
               permet de passer de la route au chemin au gré de vos envies.
-              Polyvalent, dynamique et confortable, ce vélo s’adapte à votre
-              pratique sportive ou plutôt aventurière en bike packing. 
+              Polyvalent, dynamique et confortable, ce vélo s'adapte à votre
+              pratique sportive ou plutôt aventurière en bike packing. 
             </span>
             <br />
-            Si nous devions choisir qu’un seul vélo, ce serait celui-ci !
+            Si nous devions choisir qu'un seul vélo, ce serait celui-ci !
           </>
         }
         linkUrl="https://www.epsilon-bikes.com/velos/gravel-personnalisable-fabrique-en-france/"
         linkTextColor="text-zinc-700"
+        index={0}
       />
       <FeaturedCard
         variant="bg-stone-300"
@@ -46,6 +54,7 @@ export const FeaturedSection = () => {
         description="Baroudeur par excellence, ce vélo sur-mesure typé gravel est prêt à affronter toutes les routes et les sentiers. Il ravira aussi William pour des excursions de quelques jours en bike packing."
         linkUrl="https://www.epsilon-bikes.com/velos/la-licorne/"
         linkTextColor="text-zinc-700"
+        index={1}
       />
       <FeaturedCard
         variant="bg-zinc-700"
@@ -54,9 +63,10 @@ export const FeaturedSection = () => {
         imageAlt="Le Grand Voyageur"
         title="Le Grand Voyageur"
         subtitle="de Camille"
-        description="Camille voulait un vélo robuste et fiable, équipé du célèbre moyeu Rohloff à 14 vitesses intégrées, qui puisse l’accompagner dans ses déplacements quotidiens comme ses périples et ses itinérances à vélo."
+        description="Camille voulait un vélo robuste et fiable, équipé du célèbre moyeu Rohloff à 14 vitesses intégrées, qui puisse l'accompagner dans ses déplacements quotidiens comme ses périples et ses itinérances à vélo."
         linkUrl="https://www.epsilon-bikes.com/velos/le-grand-voyageur/"
         linkTextColor="text-zinc-700"
+        index={2}
       />
     </section>
   );
