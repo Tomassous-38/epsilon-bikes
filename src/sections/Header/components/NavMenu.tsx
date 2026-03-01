@@ -71,7 +71,7 @@ export const NavMenu = () => {
       </li>
 
       <li className="text-xl box-border leading-7 p-2 md:leading-8 md:p-0">
-        <button className="relative text-xl items-center bg-transparent gap-x-2 flex leading-7 gap-y-2 text-center w-fit border-2 border-zinc-700 overflow-clip px-6 py-2 hover:bg-zinc-700 hover:text-white transition-colors duration-200 md:text-2xl md:leading-8 md:px-9 md:py-3">
+        <button className="relative text-xl items-center bg-transparent gap-x-2 flex leading-7 gap-y-2 text-center w-fit border-2 border-zinc-700 overflow-clip px-6 py-2 hover:bg-zinc-700 hover:text-white hover:scale-[1.03] transition-all duration-200 md:text-2xl md:leading-8 md:px-9 md:py-3">
           <span className="text-xl box-border block leading-7 md:text-2xl md:leading-8">
             Contact
           </span>
