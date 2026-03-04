@@ -5,7 +5,7 @@ export const NavMenu = () => {
         <button className="text-xl bg-transparent leading-7 text-left w-full px-0 py-2 md:text-2xl md:leading-8 md:w-fit md:py-7">
           <a
             href="https://www.epsilon-bikes.com/custom-lab-velo-sur-mesure/"
-            className="relative text-xl box-border leading-7 opacity-70 hover:opacity-100 transition-opacity duration-200 md:text-2xl md:leading-8 after:bg-black after:block after:h-[1.5px] after:absolute after:-bottom-1 after:inset-x-0 after:scale-x-0 after:origin-[0%_50%] hover:after:scale-x-100 after:transition-transform after:duration-300 after:font-gotham"
+            className="relative text-xl box-border leading-7 opacity-70 hover:opacity-100 transition-opacity duration-200 md:text-2xl md:leading-8 after:bg-black after:block after:h-[1.5px] after:absolute after:-bottom-1 after:inset-x-0 after:scale-x-0 after:origin-[0%_50%] hover:after:scale-x-100 after:transition-transform after:duration-300 after:font-body"
           >
             Custom Lab
           </a>
@@ -34,7 +34,7 @@ export const NavMenu = () => {
         <button className="text-xl bg-transparent leading-7 text-center px-0 py-2 md:text-2xl md:leading-8 md:py-7">
           <a
             href="https://www.epsilon-bikes.com/la-gamme-de-velos/"
-            className="relative text-xl box-border leading-7 opacity-70 hover:opacity-100 transition-opacity duration-200 md:text-2xl md:leading-8 after:bg-black after:block after:h-[1.5px] after:absolute after:-bottom-1 after:inset-x-0 after:scale-x-0 after:origin-[0%_50%] hover:after:scale-x-100 after:transition-transform after:duration-300 after:font-gotham"
+            className="relative text-xl box-border leading-7 opacity-70 hover:opacity-100 transition-opacity duration-200 md:text-2xl md:leading-8 after:bg-black after:block after:h-[1.5px] after:absolute after:-bottom-1 after:inset-x-0 after:scale-x-0 after:origin-[0%_50%] hover:after:scale-x-100 after:transition-transform after:duration-300 after:font-body"
           >
             La gamme
           </a>
@@ -45,7 +45,7 @@ export const NavMenu = () => {
         <button className="text-xl bg-transparent leading-7 text-left w-full px-0 py-2 md:text-2xl md:leading-8 md:w-fit md:py-7">
           <a
             href="#"
-            className="relative text-xl box-border leading-7 opacity-70 hover:opacity-100 transition-opacity duration-200 md:text-2xl md:leading-8 after:bg-black after:block after:h-[1.5px] after:absolute after:-bottom-1 after:inset-x-0 after:scale-x-0 after:origin-[0%_50%] hover:after:scale-x-100 after:transition-transform after:duration-300 after:font-gotham"
+            className="relative text-xl box-border leading-7 opacity-70 hover:opacity-100 transition-opacity duration-200 md:text-2xl md:leading-8 after:bg-black after:block after:h-[1.5px] after:absolute after:-bottom-1 after:inset-x-0 after:scale-x-0 after:origin-[0%_50%] hover:after:scale-x-100 after:transition-transform after:duration-300 after:font-body"
           >
             Plus
           </a>

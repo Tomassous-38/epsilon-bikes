@@ -1,5 +1,4 @@
 import { motion, type Variants } from "framer-motion";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
 import type { ReactNode } from "react";
 
 type Direction = "up" | "down" | "left" | "right" | "none";
@@ -34,20 +33,12 @@ export const ScrollReveal = ({
   children,
   direction = "up",
   delay = 0,
-  duration = 0.6,
   distance = 40,
   scale = 1,
   className = "",
   threshold = 0.2,
 }: ScrollRevealProps) => {
-  const { ref, isInView, prefersReducedMotion } = useScrollReveal({
-    threshold,
-  });
   const offset = getOffset(direction, distance);
-
-  if (prefersReducedMotion) {
-    return <div className={className}>{children}</div>;
-  }
 
   const variants: Variants = {
     hidden: { opacity: 0, x: offset.x, y: offset.y, scale },
@@ -56,12 +47,17 @@ export const ScrollReveal = ({
 
   return (
     <motion.div
-      ref={ref}
       className={className}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      whileInView="visible"
+      viewport={{ once: false, amount: threshold }}
       variants={variants}
-      transition={{ duration, delay, ease: [0.25, 0.1, 0.25, 1] }}
+      transition={{
+        delay,
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+      }}
     >
       {children}
     </motion.div>

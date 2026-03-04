@@ -1,6 +1,7 @@
 import {
   useScroll,
   useTransform,
+  useSpring,
   useReducedMotion,
   type MotionValue,
 } from "framer-motion";
@@ -17,12 +18,14 @@ export function useParallax({
   const prefersReducedMotion = useReducedMotion();
   const { scrollY } = useScroll();
 
-  const y = useTransform(
+  const raw = useTransform(
     scrollY,
-    [0, 1000],
-    prefersReducedMotion ? [0, 0] : [0, speed * 300],
+    [0, 3000],
+    prefersReducedMotion ? [0, 0] : [0, speed * 600],
     { clamp }
   );
+
+  const y = useSpring(raw, { stiffness: 80, damping: 30 });
 
   return y;
 }

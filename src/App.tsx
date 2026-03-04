@@ -6,9 +6,9 @@ import { FloatingButton } from "@/components/FloatingButton";
 
 export const App = () => {
   return (
-    <body className="text-black text-base not-italic normal-nums font-normal accent-auto bg-stone-300 box-border caret-transparent block tracking-[normal] leading-6 list-outside list-disc pointer-events-auto text-start indent-[0px] normal-case visible w-full overflow-auto border-separate font-gotham">
-      <div className="box-border caret-transparent">
-        <div className="relative box-border caret-transparent">
+    <div className="text-[#464748] text-base leading-relaxed bg-[#f6eeec] font-body antialiased">
+      <div>
+        <div className="relative">
           <Header />
           <HeroSection />
           <Main />
@@ -16,6 +16,6 @@ export const App = () => {
           <FloatingButton />
         </div>
       </div>
-    </body>
+    </div>
   );
 };

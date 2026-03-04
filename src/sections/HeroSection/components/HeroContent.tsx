@@ -1,26 +1,19 @@
-import { motion, type MotionValue } from "framer-motion";
+import { motion } from "framer-motion";
 
-type HeroContentProps = {
-  textY: MotionValue<number>;
-};
-
-export const HeroContent = ({ textY }: HeroContentProps) => {
+export const HeroContent = () => {
   return (
-    <motion.div
-      style={{ y: textY }}
-      className="absolute flex flex-col w-fit z-[3]"
-    >
+    <>
       <motion.img
-        src="https://c.animaapp.com/mm7jgoq6KT5fKc/assets/logo.svg"
-        alt=""
-        className="self-center aspect-square max-w-full w-32 mb-24"
+        src="https://www.epsilon-bikes.com/wp-content/uploads/2023/12/logo.svg"
+        alt="Epsilon Bikes"
+        className="self-center w-32 mb-16 aspect-square"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
       />
-      <div>
+      <div className="cursor-default">
         <motion.h1
-          className="text-red-500 text-[72.25px] font-bold self-center flex justify-center tracking-[3.6px] leading-[57.8px] text-center uppercase md:text-[208px] md:tracking-[10.4px] md:leading-[166.4px] drop-shadow-[0_4px_8px_rgba(0,0,0,0.3)]"
+          className="flex justify-center self-center uppercase text-[#ea4b33] text-[min(15vw+1rem,16rem)] text-center font-bold tracking-[0.12em] leading-[0.8]"
           initial={{ opacity: 0, scale: 0.85, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{
@@ -31,9 +24,9 @@ export const HeroContent = ({ textY }: HeroContentProps) => {
         >
           EPSILON
         </motion.h1>
-        <div className="flex justify-between pl-[9px] pr-[11.625px] md:pl-[16.24px] md:pr-[25.2px]">
+        <div className="flex justify-between pl-[calc(0.8vw+6px)] pr-[calc(1.5vw+6px)]">
           <motion.p
-            className="text-base leading-6 uppercase md:text-2xl md:leading-8"
+            className="uppercase sm:text-2xl"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 1.0, ease: "easeOut" }}
@@ -41,7 +34,7 @@ export const HeroContent = ({ textY }: HeroContentProps) => {
             <span className="inline-block">Unique</span>
           </motion.p>
           <motion.p
-            className="text-base leading-6 uppercase md:text-2xl md:leading-8"
+            className="uppercase sm:text-2xl"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 1.0, ease: "easeOut" }}
@@ -50,6 +43,6 @@ export const HeroContent = ({ textY }: HeroContentProps) => {
           </motion.p>
         </div>
       </div>
-    </motion.div>
+    </>
   );
 };

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
 import type { ReactNode } from "react";
 
 type StaggerChildrenProps = {
@@ -15,20 +14,12 @@ export const StaggerChildren = ({
   className = "",
   threshold = 0.15,
 }: StaggerChildrenProps) => {
-  const { ref, isInView, prefersReducedMotion } = useScrollReveal({
-    threshold,
-  });
-
-  if (prefersReducedMotion) {
-    return <div className={className}>{children}</div>;
-  }
-
   return (
     <motion.div
-      ref={ref}
       className={className}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      whileInView="visible"
+      viewport={{ once: false, amount: threshold }}
       variants={{
         hidden: {},
         visible: { transition: { staggerChildren: stagger } },

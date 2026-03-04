@@ -5,7 +5,7 @@ import { AboutSection } from "@/sections/AboutSection";
 
 export const Main = () => {
   return (
-    <main className="box-border caret-transparent border-red-500 border-b-2 border-solid">
+    <main className="border-b-2 border-[#ea4b33]">
       <IntroSection />
       <FeaturedSection />
       <ProductTypesSection />
